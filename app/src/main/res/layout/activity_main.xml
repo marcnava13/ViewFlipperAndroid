@@ -1,0 +1,175 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:id="@+id/view_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ViewFlipper
+                android:id="@+id/view_flipper"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="6dip" >
+
+                <!--  The child Views/Layout to flip -->
+
+                <!--  Layout 1 for 1st Screen -->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="This Is Screen 1"
+                        android:textColor="#191975"
+                        android:textSize="25dp"
+                        android:textStyle="bold" >
+                    </TextView>
+
+                    <ImageView
+                        android:layout_marginTop="15dp"
+                        android:id="@+id/imageView1"
+                        android:layout_width="450dp"
+                        android:layout_height="450dp"
+                        android:src="@drawable/image1" />
+
+                </LinearLayout>
+
+                <!--  Layout 2 for 2nd Screen -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_marginTop="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="This Is Screen 2"
+                        android:textColor="#191975"
+                        android:textSize="25dp"
+                        android:textStyle="bold" >
+                    </TextView>
+
+                    <ImageView
+                        android:layout_marginTop="15dp"
+                        android:id="@+id/imageView2"
+                        android:layout_width="450dp"
+                        android:layout_height="450dp"
+                        android:src="@drawable/image2" />
+
+                </LinearLayout>
+
+                <!--  Layout 3 for 2nd Screen -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_marginTop="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="This Is Screen 3"
+                        android:textColor="#191975"
+                        android:textSize="25dp"
+                        android:textStyle="bold" >
+                    </TextView>
+
+                    <ImageView
+                        android:layout_marginTop="15dp"
+                        android:id="@+id/imageView3"
+                        android:layout_width="450dp"
+                        android:layout_height="450dp"
+                        android:src="@drawable/image3" />
+
+                </LinearLayout>
+
+
+            </ViewFlipper>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <Button
+                    android:id="@+id/btn_previous"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prev"
+                    android:layout_weight="1"/>
+
+                <Button
+                    android:id="@+id/btn_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/start"
+                    android:layout_weight="1"/>
+
+                <Button
+                    android:id="@+id/btn_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/next"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <EditText
+                    android:id="@+id/editText1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:hint="@string/interval"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:layout_alignParentTop="true" />
+
+            </RelativeLayout>
+
+            <TextView android:text="@string/header_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:textSize="20sp"
+                android:gravity="center|center_horizontal|center_vertical" />
+
+            <TextView android:text="@string/content_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"/>
+
+            <TextView android:text="@string/url"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:gravity="center|center_horizontal|center_vertical"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
